@@ -5,6 +5,7 @@ const tripSchema = mongoose.Schema({
 	arrival: String,
 	date: Date,
 	price: Number,
+	status: {type: String, enum: ['available', 'booked', 'payed'], default: available}
 });
 
 const Trip = mongoose.model('trips', tripSchema);
